@@ -1,0 +1,29 @@
+﻿<Window x:Class="BlackjackStarter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BlackjackStarter"
+        mc:Ignorable="d"
+        Title="The World's Coolest Blackjack" Height="600" Width="800">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="C:/Users/aswad/OneDrive/Documents/Z_Semester_4/.net/BlackjackStarter/BlackjackStarter/JPEG/background_table2.jpg" Stretch="Fill"/>
+        </Grid.Background>
+
+        <!-- Dealer's WrapPanel-->
+        <WrapPanel Name="DealerPanel" VerticalAlignment="Top" HorizontalAlignment="Center" Height="150" Margin="20" Background="Transparent">
+        </WrapPanel>
+
+        <!-- Center stack panel for the Hit, Stand, and New Game buttons -->
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal" Background="Transparent">
+            <Button Name="HitButton" Content="Hit" Width="80" Height="40" Margin="10" Background="Red" Click="Hit_Click"/>
+            <Button Name="StandButton" Content="Stand" Width="80" Height="40" Margin="10" Background="Green" Click="Stand_Click"/>
+            <Button Name="NewGameButton" Content="New Game" Width="80" Height="40" Margin="10" Visibility="Hidden" Click="NewGameButton_Click"/>
+        </StackPanel>
+
+        <!-- Player's WrapPanel -->
+        <WrapPanel Name="PlayerPanel" VerticalAlignment="Bottom" HorizontalAlignment="Center" Height="150" Margin="20" Background="Transparent">
+        </WrapPanel>
+    </Grid>
+</Window>
